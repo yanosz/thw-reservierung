@@ -1,0 +1,11 @@
+Hallo,
+
+<%= @rental.user%> hat eine Reservierung gelöscht:
+Beginn:	<%= @rental.from_date %>
+Ende:	<%= @rental.to_date %>
+Objekt:	<%= @rental.subject %>
+<%- if @rental.comment -%>
+	Kommentar:
+	<%= @rental.comment%>
+<%- end -%>
+

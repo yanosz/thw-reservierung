@@ -1,0 +1,27 @@
+<h1>Erfasste Fahrzeuge</h1>
+
+<table class="list-table">
+  <tr>
+    <th>Kennzeichen / Name</th>
+    <th>Benachrichtigung an</th>
+    <th>Benutzbar</th>
+    <th>Kommentar</th>
+	<th>&nbsp;</th>
+  </tr>
+
+<% @cars.each do |car| %>
+  <tr class='<%= cycle("odd","even")%>'>
+    <td><%=h car %></td>
+    <td><%=h car.notify_address %></td>
+    <td><%=h((car.usable) ? "Ja" : "Nein") %></td>
+    <td><%=h car.comment %></td>
+    <td><%= link_to 'Reservieren', new_rental_path(:subject_id => car.id, :type => "Car") %>
+    <%= link_to 'Bearbeiten', edit_car_path(car) %>
+    <%= link_to 'Löschen', car, :confirm => 'Das Fahrzeuge wird gelöscht - und alle Einträge dazu!', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Neues Fahrzeug erfassen', new_car_path %>

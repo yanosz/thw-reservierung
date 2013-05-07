@@ -1,0 +1,35 @@
+  <%= form.error_messages %>
+
+
+
+<table class="list-table">
+		<tr class="odd">
+			<td>Kennzeichen:</td>
+			<td><%= form.text_field :kennzeichen %></td>
+		</tr>
+		<tr class="even">
+			<td >Name:</td>
+			<td><%= form.text_field :name %></td>
+		</tr>
+		<tr class="odd">
+			<td>Benachrichtigungen an:</td>
+			<td><%= form.text_field :notify_address %></td>
+		</tr>
+		<tr class="even">
+			<td >Benutzbar:</td>
+			<td><%= form.check_box :usable %></td>
+		</tr>
+		
+		
+		<tr class="odd">
+			<td colspan="2">Kommentar:</td>
+		</tr>
+		<tr class="even">
+			<td colspan="2"><%= form.text_area :comment ,:style => "width: 100%;"%></td>
+		</tr>
+		<tr>
+			<td colspan="2"><%= form.submit 'Speichern' %></td>
+		</tr>
+	</table>
+  </p>
+

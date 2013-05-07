@@ -1,0 +1,8 @@
+<h1>Verleih / Reservierung anlegen</h1>
+<p>
+	Von: <%= @rental.subject%>, Für: <%= @rental.user%>
+</p>
+
+<% form_for(@rental) do |form| %>
+<%= render form %>
+<% end %>

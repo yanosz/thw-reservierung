@@ -1,0 +1,23 @@
+<p>
+  <b>From:</b>
+  <%=h @rental.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%=h @rental.to %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @rental.subject_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @rental.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>

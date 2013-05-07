@@ -1,0 +1,28 @@
+<h1>Listing subjects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Comment</th>
+    <th>Kennzeichen</th>
+    <th>Notify address</th>
+    <th>Usable</th>
+  </tr>
+
+<% @subjects.each do |subject| %>
+  <tr>
+    <td><%=h subject.name %></td>
+    <td><%=h subject.comment %></td>
+    <td><%=h subject.kennzeichen %></td>
+    <td><%=h subject.notify_address %></td>
+    <td><%=h subject.usable %></td>
+    <td><%= link_to 'Show', subject %></td>
+    <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+    <td><%= link_to 'Destroy', subject, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New subject', new_subject_path %>

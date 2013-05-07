@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @car.name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @car.comment %>
+</p>
+
+<p>
+  <b>Kennzeichen:</b>
+  <%=h @car.kennzeichen %>
+</p>
+
+<p>
+  <b>Notify address:</b>
+  <%=h @car.notify_address %>
+</p>
+
+<p>
+  <b>Usable:</b>
+  <%=h @car.usable %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

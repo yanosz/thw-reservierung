@@ -1,0 +1,14 @@
+Hallo,
+
+<%= @rental.user%> hat eine neue Reservierung angelegt:
+Beginn:	<%= @rental.from_date %>
+Ende:	<%= @rental.to_date %>
+Objekt:	<%= @rental.subject %>
+<%- if @rental.comment%>
+Kommentar:
+<%= @rental.comment%>
+<%- end -%>
+Weitere Infos: <%= edit_rental_url(@rental)%>
+
+
+

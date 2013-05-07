@@ -1,0 +1,27 @@
+<h1>Erfasste Zelte</h1>
+
+<table class="list-table">
+  <tr>
+    <th>Kennzeichen / Name</th>
+    <th>Benachrichtigung an</th>
+    <th>Benutzbar</th>
+    <th>Kommentar</th>
+	<th>&nbsp;</th>
+  </tr>
+
+<% @tents.each do |tent| %>
+  <tr class='<%= cycle("odd","even")%>'>
+    <td><%=h tent %></td>
+    <td><%=h tent.notify_address %></td>
+     <td><%=h((tent.usable) ? "Ja" : "Nein") %></td>
+    <td><%=h tent.comment %></td>
+    <td><%= link_to 'Reservieren', new_rental_path(:subject_id => tent.id, :type => "Tent") %>
+    <%= link_to 'Bearbeiten', edit_tent_path(tent) %>
+    <%= link_to 'Löschen', tent, :confirm => 'Das Zelt wird gelöscht - und alle Einträge dazu!', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Neues Zelt erfassen', new_tent_path %>

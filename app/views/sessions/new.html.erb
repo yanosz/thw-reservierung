@@ -1,0 +1,21 @@
+<% form_for :session, @session, :url => {:action => 'create'} do |form|%>
+<h2>Anmeldung</h2>
+<fieldset style="width: 32em; margin: 0px auto;">
+	<legend>Login</legend>
+	<table>
+		<tr>
+			<td>Benutzer:</td>
+			<td><%= form.text_field :login%></td>
+			<td<i>(vorname.nachname)</i></td>
+		</tr>
+		<tr>
+			<td>Kennwort:</td>
+			<td><%= form.password_field :password%></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3" style="text-align: center;"><%= form.submit 'Anmelden'%></td>
+		</tr>
+	</table>
+</fieldset>
+<% end %>

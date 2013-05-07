@@ -1,0 +1,3 @@
+NoticeMailer#canceled
+
+Find me in app/views/notice_mailer/canceled.erb

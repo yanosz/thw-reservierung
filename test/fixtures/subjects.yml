@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  comment: MyText
+  kennzeichen: MyString
+  notify_address: MyString
+  usable: false
+
+two:
+  name: MyString
+  comment: MyText
+  kennzeichen: MyString
+  notify_address: MyString
+  usable: false

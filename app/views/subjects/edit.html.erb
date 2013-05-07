@@ -1,0 +1,32 @@
+<h1>Editing subject</h1>
+
+<% form_for(@subject) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.label :kennzeichen %><br />
+    <%= f.text_field :kennzeichen %>
+  </p>
+  <p>
+    <%= f.label :notify_address %><br />
+    <%= f.text_field :notify_address %>
+  </p>
+  <p>
+    <%= f.label :usable %><br />
+    <%= f.check_box :usable %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @subject %> |
+<%= link_to 'Back', subjects_path %>

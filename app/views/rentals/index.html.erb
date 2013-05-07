@@ -1,0 +1,35 @@
+<h1>Reservierung / Verleih</h1>
+<% if @type%>
+	<h2><%= @type %></h2>
+<% end %>
+<p>
+<% form_for @search, :url => rentals_url, :method => 'post' do |form|%>
+	<%= form.check_box :show_history, :onchange => "$$('.edit_search').first().submit()"%> Zeige History | 
+	Sortieren <%= form.select :order, Search.search_keys, {}, :onchange =>"$$('.edit_search').first().submit()" %><br />
+<% end %>
+</p>
+<table class="list-table">
+  <tr>
+  	<th>Bezeichnung</th>
+    <th>Für</th>
+    <th>Beginn</th>
+    <th>Ende</th>
+    <th>Kommentar</th>
+	<th>&nbsp;</th>
+  </tr>
+
+<% @rentals.each do |rental| %>
+  <tr class="<%= cycle('odd','even') %>">
+    <td><%=h rental.subject %></td>
+    <td><%=h rental.user %></td>
+    <td><%=h rental.from_date %></td>
+    <td><%=h rental.to_date %></td>
+    <td><%=h rental.comment %></td>
+    <td>
+    <%= link_to 'Bearbeiten',  edit_rental_path(rental) %>
+    <%= link_to 'Löschen', rental, :confirm => 'Eintrag wird gelöscht', :method => :delete%></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

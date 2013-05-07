@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @tent.name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @tent.comment %>
+</p>
+
+<p>
+  <b>Kennzeichen:</b>
+  <%=h @tent.kennzeichen %>
+</p>
+
+<p>
+  <b>Notify address:</b>
+  <%=h @tent.notify_address %>
+</p>
+
+<p>
+  <b>Usable:</b>
+  <%=h @tent.usable %>
+</p>
+
+
+<%= link_to 'Edit', edit_tent_path(@tent) %> |
+<%= link_to 'Back', tents_path %>
