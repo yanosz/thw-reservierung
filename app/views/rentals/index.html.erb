@@ -4,11 +4,11 @@
 <% end %>
 <p>
 <% form_for @search, :url => rentals_url, :method => 'post' do |form|%>
-	<%= form.check_box :show_history, :onchange => "$$('.edit_search').first().submit()"%> Zeige History | 
-	Sortieren <%= form.select :order, Search.search_keys, {}, :onchange =>"$$('.edit_search').first().submit()" %><br />
+	<%= form.check_box :show_history, :onchange => "$$('.edit_search').first().submit()"%> Zeige History<br />
 <% end %>
 </p>
-<table class="list-table">
+<table id="list-table" class="rentals">
+<thead>
   <tr>
   	<th>Bezeichnung</th>
     <th>Für</th>
@@ -17,7 +17,8 @@
     <th>Kommentar</th>
 	<th>&nbsp;</th>
   </tr>
-
+</thead>
+<tbody>
 <% @rentals.each do |rental| %>
   <tr class="<%= cycle('odd','even') %>">
     <td><%=h rental.subject %></td>
@@ -30,6 +31,7 @@
     <%= link_to 'Löschen', rental, :confirm => 'Eintrag wird gelöscht', :method => :delete%></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
