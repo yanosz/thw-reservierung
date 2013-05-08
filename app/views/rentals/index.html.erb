@@ -4,8 +4,7 @@
 <% end %>
 <p>
 <% form_for @search, :url => rentals_url, :method => 'post' do |form|%>
-	<%= form.check_box :show_history, :onchange => "$$('.edit_search').first().submit()"%> Zeige History | 
-	Sortieren <%= form.select :order, Search.search_keys, {}, :onchange =>"$$('.edit_search').first().submit()" %><br />
+	<%= form.check_box :show_history, :onchange => "$$('.edit_search').first().submit()"%> Zeige History<br />
 <% end %>
 </p>
 <table id="list-table" class="rentals">
