@@ -1,0 +1,14 @@
+.tablesorter-header {
+	padding: 4px 18px 4px 4px; 
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url("data:image/gif;base64,R0lGODlhDQALAKEBABF3Ef///////////yH5BAEKAAIALAAAAAANAAsAAAIVhB+nGr3c3It00fsyvBLxjGmRhjwFADs=");
+	cursor: pointer;
+}
+.tablesorter-headerAsc { 
+	background-image: url("data:image/gif;base64,R0lGODlhDQALAKEBABF3Ef///////////yH5BAEKAAIALAAAAAANAAsAAAIQhI+py+0PTZiUpmoVbpmrAgA7");
+}
+.tablesorter-headerDesc {
+	background-image: url("data:image/gif;base64,R0lGODlhDQALAKEBABF3Ef///////////yH5BAEKAAIALAAAAAANAAsAAAIRhB+nGr3c3It00fuy3rz7rxQAOw==");
+}
+

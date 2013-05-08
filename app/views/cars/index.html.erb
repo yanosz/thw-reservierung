@@ -1,14 +1,16 @@
 <h1>Erfasste Fahrzeuge</h1>
 
-<table class="list-table">
+<table id="list-table">
+<thead>
   <tr>
-    <th class="0" >Kennzeichen / Name</th>
-    <th class="1" >Benachrichtigung an</th>
-    <th class="2" >Benutzbar</th>
-    <th class="3" >Kommentar</th>
+    <th>Kennzeichen / Name</th>
+    <th>Benachrichtigung an</th>
+    <th>Benutzbar</th>
+    <th>Kommentar</th>
 	<th>&nbsp;</th>
   </tr>
-
+</thead>
+<tbody>
 <% @cars.each do |car| %>
   <tr class='<%= cycle("odd","even")%>'>
     <td><%=h car %></td>
@@ -20,6 +22,7 @@
     <%= link_to 'Löschen', car, :confirm => 'Das Fahrzeuge wird gelöscht - und alle Einträge dazu!', :method => :delete %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />

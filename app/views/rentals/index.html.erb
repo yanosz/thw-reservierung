@@ -8,16 +8,18 @@
 	Sortieren <%= form.select :order, Search.search_keys, {}, :onchange =>"$$('.edit_search').first().submit()" %><br />
 <% end %>
 </p>
-<table class="list-table">
+<table id="list-table" class="rentals">
+<thead>
   <tr>
-  	<th class="0" >Bezeichnung</th>
-    <th class="1" >Für</th>
-    <th class="2" >Beginn</th>
-    <th class="3" >Ende</th>
-    <th class="4" >Kommentar</th>
+  	<th>Bezeichnung</th>
+    <th>Für</th>
+    <th>Beginn</th>
+    <th>Ende</th>
+    <th>Kommentar</th>
 	<th>&nbsp;</th>
   </tr>
-
+</thead>
+<tbody>
 <% @rentals.each do |rental| %>
   <tr class="<%= cycle('odd','even') %>">
     <td><%=h rental.subject %></td>
@@ -30,6 +32,7 @@
     <%= link_to 'Löschen', rental, :confirm => 'Eintrag wird gelöscht', :method => :delete%></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
