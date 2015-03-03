@@ -1,3 +1,4 @@
+# encoding: utf-8
 class TentsController < ApplicationController
   # GET /tents
   # GET /tents.xml
