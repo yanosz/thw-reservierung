@@ -15,7 +15,7 @@ gem install passenger --no-ri --no-rdoc
 
 Create Database
 -----------------------------
-Creainge a database (eg reservierung) and a user. This is not covered here
+Create a database (eg reservierung) and a user. This is not covered here
 
 Install application
 -----------------------------
