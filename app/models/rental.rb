@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Rental < ActiveRecord::Base
   belongs_to :subject
   validates_presence_of :subject_id, :message => "Kein Gegenstand ausgewählt"
