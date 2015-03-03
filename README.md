@@ -6,12 +6,9 @@ Preconditions
 Set up all Debian packets
 
 <code>apt-get install build-essential ruby1.9.3 ruby-1.9.3-dev libmysqlclient-dev mysql-server git</code>
-
-<code> gem install rake -v=0.8.4 --no-ri --no-rdoc</code>
-
-<code> gem install rails -v=2.3.18 --no-ri --no-rdoc</code>
-
-<code> gem install passenger --no-ri --no-rdoc</code>
+gem install rake -v=0.8.4 --no-ri --no-rdoc</code>
+gem install rails -v=2.3.18 --no-ri --no-rdoc</code>
+gem install passenger --no-ri --no-rdoc</code>
 
 Create Database
 ---------------------
