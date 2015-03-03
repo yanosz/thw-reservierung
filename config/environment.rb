@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'mysql'
   config.gem 'net-ldap'
-  config.gem 'calendar_date_select'
+  config.gem 'calendar_date_select', :version => '2.1.3'
   #config.gem "declarative_authorization", :source=> "http://gemcutter.org"
   
   # Only load the plugins named here, in the order given (default is alphabetical).
