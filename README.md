@@ -12,10 +12,12 @@ gem install rake -v=0.8.4 --no-ri --no-rdoc
 gem install rails -v=2.3.18 --no-ri --no-rdoc
 gem install passenger --no-ri --no-rdoc</pre>
 
+
 Create Database
 ---------------------
 
 Create a database (eg reservierung) and a user. This is not covered here
+
 
 Install application
 ------------------
@@ -41,8 +43,10 @@ cd /srv/thw-reservierung
 rake gems:install
 </pre>
 
+
 Configure application
 ------------------------
+
 1. Edit <code>/srv/thw-reservierung/config/database.yml</code> according to your needs
 2. Populate database - if not empty (eg. <pre>
 su - reservierung
@@ -63,5 +67,4 @@ rake db:migrate
         # Uncomment this if you're on Apache >= 2.4:
         #Require all granted
     </Directory>
-
 </pre>
