@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Search
   attr_accessor :show_history
   attr_accessor :order
