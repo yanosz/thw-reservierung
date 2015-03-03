@@ -25,13 +25,13 @@ Since passenger su's to the owner of the directoy, creating a new user is recomm
 
 <code>useradd -s /bin/bash reservireung && chown /srv/reservierung</code>
 
-Afterarwds, su to that user and checkout the source-tree<pre>
+Su to user and checkout source-tree<pre>
 su - reservierung
 cd /srv
 git clone https://github.com/yanosz/thw-reservierung.git
 cd /srv/thw-reservierung
 cp config/database.yml.template database.yml
-# Terminate su shell - back to root
+exit # Terminate su shell - back to root
 </pre>
 
 <pre>
