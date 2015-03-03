@@ -17,7 +17,7 @@ Install application
 -----------------------------
 Install passenger: <code>passenger-install-apache2-module # ...</code>
 
-Since passenger su's to the owner of the directoy, creating a new user is recommended:
+Since passenger su's to the owner of the directory, creating a new user is recommended:
 
 <code>useradd -s /bin/bash reservireung && chown /srv/reservierung</code>
 
