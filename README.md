@@ -40,7 +40,7 @@ Configure application
 -----------------------------
 1. Create a MySQL-database including a dedicated user
 1. Edit <code>/srv/thw-reservierung/config/database.yml</code> according to your needs
-2. Populate database - if not empty. For instance:
+2. Populate database - if not empty. For instance:<pre>
 su - reservierung
 cd /srv/thw-reservierung
 export RAILS_ENV=production
