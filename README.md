@@ -13,10 +13,6 @@ gem install rails -v=2.3.18 --no-ri --no-rdoc
 gem install passenger --no-ri --no-rdoc
 </pre>
 
-Create Database
------------------------------
-Create a database (eg reservierung) and a user. This is not covered here
-
 Install application
 -----------------------------
 Install passenger: <code>passenger-install-apache2-module # ...</code>
@@ -42,14 +38,16 @@ rake gems:install
 
 Configure application
 -----------------------------
+1. Create a MySQL-database including a dedicated user
 1. Edit <code>/srv/thw-reservierung/config/database.yml</code> according to your needs
-2. Populate database - if not empty (eg. <pre>
+2. Populate database - if not empty. For instance:
 su - reservierung
 cd /srv/thw-reservierung
 export RAILS_ENV=production
 rake db:migrate
 </pre>
-3. Configure Apache. Example<pre>
+3. Configure Apache. For instance: 
+<pre>
 # These have been added:
     Alias /reservierung /srv/thw-reservierung/public
     \<Location /reservierung>
